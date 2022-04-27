@@ -7,5 +7,7 @@ data class OktaRequestParameters(
         var discoveryUri: String,
         var scopes: ArrayList<String>,
         var userAgentTemplate: String = "",
-        var requireHardwareBackedKeyStore: Boolean = false
+        var requireHardwareBackedKeyStore: Boolean = false,
+        var tokenUrl: String = "",
+        var authorizationUrl: String = ""
 )

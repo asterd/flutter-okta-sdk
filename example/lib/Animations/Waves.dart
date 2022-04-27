@@ -16,15 +16,9 @@ class AnimatedWave extends StatelessWidget {
       return Container(
         height: height,
         width: constraints.biggest.width,
-        child: ControlledAnimation(
-            playback: Playback.LOOP,
-            duration: Duration(milliseconds: (5000 / speed).round()),
-            tween: Tween(begin: 0.0, end: 2 * pi),
-            builder: (context, value) {
-              return CustomPaint(
-                foregroundPainter: CurvePainter(value + offset, color),
-              );
-            }),
+        child: CustomPaint(
+          foregroundPainter: CurvePainter(10, color),
+        )
       );
     });
   }

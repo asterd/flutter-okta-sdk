@@ -45,16 +45,14 @@ class FlutterOktaSdkPlugin : FlutterPlugin, MethodCallHandler,
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
 //        OktaClient.getWebClient().handleActivityResult(requestCode, resultCode, data)
 //        return PendingOperation.hasPendingOperation != null
-        try {
+        return try {
             val client = OktaClient.getWebClient()
-            if (client != null) {
+            run {
                 client.handleActivityResult(requestCode, resultCode, data)
-                return PendingOperation.hasPendingOperation != null
-            } else {
-                return false
+                true
             }
         } catch (ex: java.lang.Exception) {
-            return false
+            false
         }
     }
 

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.okta.android:okta-oidc-android:1.2.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0266d7c4844fd5e57c0ff93bf9a310f/okta-oidc-android-1.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0266d7c4844fd5e57c0ff93bf9a310f/okta-oidc-android-1.2.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0266d7c4844fd5e57c0ff93bf9a310f/okta-oidc-android-1.2.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.okta.android/okta-oidc-android/1.2.3/d5300cd231d01e1cfb775ea43a7ea1c19e9128e3/okta-oidc-android-1.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

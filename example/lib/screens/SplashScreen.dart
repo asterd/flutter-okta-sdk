@@ -43,13 +43,13 @@ class _SplashScreenState extends State<SplashScreen> {
           Container(
             color: Colors.white,
           ),
-          onBottom(AnimatedWave(
-            height: 120, speed: 0.6, color: Colors.lightBlueAccent,
-          )),
-          onBottom(AnimatedWave(
-              height: 140, speed: 0.7, offset: pi, color: Colors.lightGreen)),
-          onBottom(AnimatedWave(
-              height: 180, speed:0.9, offset: pi / 2, color: Colors.blue)),
+          // onBottom(AnimatedWave(
+          //   height: 120, speed: 0.6, color: Colors.lightBlueAccent,
+          // )),
+          // onBottom(AnimatedWave(
+          //     height: 140, speed: 0.7, offset: pi, color: Colors.lightGreen)),
+          // onBottom(AnimatedWave(
+          //     height: 180, speed:0.9, offset: pi / 2, color: Colors.blue)),
         ],
       ),
     );

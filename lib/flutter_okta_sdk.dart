@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-
 import 'BaseRequest.dart';
 
 class OktaSDK {

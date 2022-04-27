@@ -2,6 +2,10 @@ class BaseRequest {
   /// The client id.
   String clientId;
 
+  /// Urls to specify in alternative to disc
+  String? tokenUrl;
+  String? authorizationUrl;
+
   /// The URL of where the discovery document can be found.
   String discoveryUrl;
 
@@ -23,16 +27,19 @@ class BaseRequest {
 
   String issuer;
 
-  BaseRequest(
-      {required this.clientId,
-      required this.issuer,
-      required this.discoveryUrl,
-      required this.endSessionRedirectUri,
-      required this.redirectUrl,
-      required this.scopes,
-      this.loginHint,
-      this.userAgentTemplate,
-      this.requireHardwareBackedKeyStore = false});
+  BaseRequest({
+    required this.clientId,
+    required this.issuer,
+    required this.discoveryUrl,
+    required this.endSessionRedirectUri,
+    required this.redirectUrl,
+    required this.scopes,
+    this.tokenUrl,
+    this.authorizationUrl,
+    this.loginHint,
+    this.userAgentTemplate,
+    this.requireHardwareBackedKeyStore = false
+  });
 }
 
 Map<String, Object?> convertBaseRequestToMap(BaseRequest baseRequest) {
@@ -49,6 +56,11 @@ Map<String, Object?> convertBaseRequestToMap(BaseRequest baseRequest) {
 
   if (baseRequest.loginHint != null) {
     _baseRequest['loginHint'] = baseRequest.loginHint;
+  }
+
+  if (baseRequest.tokenUrl != null && baseRequest.authorizationUrl != null) {
+    _baseRequest['tokenUrl'] = baseRequest.tokenUrl;
+    _baseRequest['authorizationUrl'] = baseRequest.authorizationUrl;
   }
 
   return _baseRequest;

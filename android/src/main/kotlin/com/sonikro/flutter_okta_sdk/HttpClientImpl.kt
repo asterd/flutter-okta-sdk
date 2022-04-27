@@ -16,7 +16,6 @@ import java.security.KeyManagementException
 import java.security.NoSuchAlgorithmException
 import javax.net.ssl.HttpsURLConnection
 
-
 class HttpClientImpl internal constructor(private val userAgentTemplate: String) : OktaHttpClient {
     var urlConnection: HttpURLConnection? = null
         private set
@@ -38,7 +37,7 @@ class HttpClientImpl internal constructor(private val userAgentTemplate: String)
     }
 
     private val userAgent: String
-        private get() {
+        get() {
             val sdkVersion = "okta-oidc-android/" + BuildConfig.VERSION_NAME
             return userAgentTemplate.replace("\$UPSTREAM_SDK", sdkVersion)
         }
@@ -56,10 +55,8 @@ class HttpClientImpl internal constructor(private val userAgentTemplate: String)
         val requestProperties = params.requestProperties()
         val userAgent = userAgent
         requestProperties!![ConnectionParameters.USER_AGENT] = userAgent
-        if (requestProperties != null) {
-            for (property in requestProperties.keys) {
-                conn.setRequestProperty(property, requestProperties[property])
-            }
+        for (property in requestProperties.keys) {
+            conn.setRequestProperty(property, requestProperties[property])
         }
         val requestMethod = params.requestMethod()
         val postParameters = params.postParameters()
@@ -68,7 +65,7 @@ class HttpClientImpl internal constructor(private val userAgentTemplate: String)
             conn.doInput = true
         } else if (requestMethod == ConnectionParameters.RequestMethod.POST) {
             conn.doOutput = true
-            if (postParameters != null && !postParameters.isEmpty()) {
+            if (postParameters != null && postParameters.isNotEmpty()) {
                 val out = DataOutputStream(conn.outputStream)
                 out.write(params.encodedPostParameters)
                 out.close()
@@ -79,6 +76,7 @@ class HttpClientImpl internal constructor(private val userAgentTemplate: String)
 
     @Throws(Exception::class)
     override fun connect(uri: Uri, params: ConnectionParameters): InputStream? {
+        println("Navigate to uri: $uri")
         urlConnection = openConnection(URL(uri.toString()), params)
         urlConnection!!.connect()
         return try {
