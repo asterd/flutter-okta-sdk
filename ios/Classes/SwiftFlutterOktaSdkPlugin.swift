@@ -7,7 +7,6 @@ import OktaSecureStorage
 
 let CHANNEL_NAME: String! = "com.sonikro.flutter_okta_sdk";
 
-
 struct FlutterOktaError: Error {
     let message: String
 

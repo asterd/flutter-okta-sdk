@@ -28,7 +28,7 @@ class FlutterOktaSdkPlugin : FlutterPlugin, MethodCallHandler,
     companion object {
         fun registerWith(registrar: Registrar) {
             val plugin = FlutterOktaSdkPlugin()
-            plugin.setActivity(registrar.activity())
+            registrar.activity()?.let { plugin.setActivity(it) }
             plugin.onAttachedToEngine(registrar.context(), registrar.messenger())
             registrar.addActivityResultListener(plugin)
         }
@@ -84,7 +84,9 @@ class FlutterOktaSdkPlugin : FlutterPlugin, MethodCallHandler,
         try {
             when (call.method) {
                 AvailableMethods.CREATE_CONFIG.methodName -> {
-                    createConfig(arguments, applicationContext!!)
+                    if (arguments != null) {
+                        createConfig(arguments, applicationContext!!)
+                    }
                 }
                 AvailableMethods.SIGN_IN.methodName -> {
                     signIn(this.mainActivity!!)

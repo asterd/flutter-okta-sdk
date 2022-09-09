@@ -3,10 +3,25 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-527279512/android.flutter_okta_sdk.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.iml" filepath="$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.main.iml" filepath="$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/748995101/android.flutter_secure_storage.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.iml" filepath="$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-29554564/android.fluttertoast.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.main.iml" filepath="$PROJECT_DIR$/.idea/modules/android.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android.unitTest.iml" />
     </modules>
   </component>
 </project>
