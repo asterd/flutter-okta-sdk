@@ -17,7 +17,6 @@ A new flutter plugin project.
   s.dependency 'Flutter'
   s.dependency 'OktaOidc'
   s.dependency 'OktaJWT'
-  s.dependency 'OktaStorage'
 
   s.platform = :ios, '12.0'
 
