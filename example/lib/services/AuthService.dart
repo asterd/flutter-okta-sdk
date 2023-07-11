@@ -72,9 +72,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return false;
   }
 
-  Future<String> getAccessToken() async {
+  Future<String?> getAccessToken() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -83,9 +84,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
-  Future<String> getIdToken() async {
+  Future<String?> getIdToken() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -94,6 +96,7 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
   Future<bool> revokeAccessToken() async {
@@ -105,6 +108,7 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return false;
   }
 
   Future<bool> revokeIdToken() async {
@@ -116,6 +120,7 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return false;
   }
 
   Future<bool> revokeRefreshToken() async {
@@ -127,6 +132,7 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return false;
   }
 
   Future<bool> clearTokens() async {
@@ -138,9 +144,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return false;
   }
 
-  Future<String> introspectAccessToken() async {
+  Future<String?> introspectAccessToken() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -149,9 +156,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
-  Future<String> introspectIdToken() async {
+  Future<String?> introspectIdToken() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -160,9 +168,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
-  Future<String> introspectRefreshToken() async {
+  Future<String?> introspectRefreshToken() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -171,9 +180,10 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 
-  Future<String> refreshTokens() async {
+  Future<String?> refreshTokens() async {
     try {
       if (oktaSdk.isInitialized == false) {
         await this.createConfig();
@@ -182,5 +192,6 @@ class AuthOktaService {
     } catch (e) {
       print(e);
     }
+    return null;
   }
 }

@@ -28,14 +28,15 @@ class LandingScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal,
-                    onPrimary: Colors.white,
-                    onSurface: Colors.grey,
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.teal,
+                    disabledForegroundColor: Colors.grey.withOpacity(0.38),
+                    disabledBackgroundColor: Colors.grey.withOpacity(0.12),
                   ),
                   onPressed: () async {
                     var isAuthenticated = await AuthProvider.of(context)
-                        .authService
-                        .isAuthenticated();
+                        ?.authService
+                        .isAuthenticated() ?? false;
                     Alert(
                     context: context,
                     //type: AlertType.info,
@@ -57,9 +58,10 @@ class LandingScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.teal,
-                    onPrimary: Colors.white,
-                    onSurface: Colors.grey,
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.teal,
+                    disabledForegroundColor: Colors.grey.withOpacity(0.38),
+                    disabledBackgroundColor: Colors.grey.withOpacity(0.12),
                   ),
                   onPressed: () async {
                     Navigator.of(context).pushNamed(MainScreen.routeName);

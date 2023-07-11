@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
 import 'dart:math';
 
 class AnimatedWave extends StatelessWidget {
@@ -8,7 +7,7 @@ class AnimatedWave extends StatelessWidget {
   final double offset;
   final Color color;
 
-  AnimatedWave({this.height, this.speed, this.offset = 0.0, this.color});
+  AnimatedWave({required this.height, required this.speed, this.offset = 0.0, required this.color});
 
   @override
   Widget build(BuildContext context) {

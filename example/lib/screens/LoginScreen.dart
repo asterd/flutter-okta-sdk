@@ -34,12 +34,13 @@ class LoginScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.teal,
-                  onPrimary: Colors.white,
-                  onSurface: Colors.grey,
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.teal,
+                  disabledForegroundColor: Colors.grey.withOpacity(0.38),
+                  disabledBackgroundColor: Colors.grey.withOpacity(0.12),
                 ),
                 onPressed: () async {
-                  await AuthProvider.of(context).authService.authorize();
+                  await AuthProvider.of(context)?.authService.authorize();
 
                   Navigator.of(context).pushNamed(LandingScreen.routeName);
                 },

@@ -1,8 +1,8 @@
 # This is a generated file; do not edit or check into version control.
 flutter_okta_sdk=/Users/ddurzo/Development/mobile/workspace/Cucinelli/flutter-okta-sdk/
-flutter_secure_storage=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-5.0.2/
-flutter_secure_storage_linux=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_linux-1.1.0/
-flutter_secure_storage_macos=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_macos-1.1.0/
-flutter_secure_storage_web=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.0.2/
-flutter_secure_storage_windows=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_windows-1.1.2/
-fluttertoast=/Users/ddurzo/Development/mobile/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.9/
+flutter_secure_storage=/Users/ddurzo/.pub-cache/hosted/pub.dev/flutter_secure_storage-5.0.2/
+flutter_secure_storage_linux=/Users/ddurzo/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.1.0/
+flutter_secure_storage_macos=/Users/ddurzo/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-1.1.0/
+flutter_secure_storage_web=/Users/ddurzo/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.0.2/
+flutter_secure_storage_windows=/Users/ddurzo/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-1.1.2/
+fluttertoast=/Users/ddurzo/.pub-cache/hosted/pub.dev/fluttertoast-8.0.9/

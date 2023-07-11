@@ -30,7 +30,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var userJson =
-                      await AuthProvider.of(context).authService.getUser();
+                      await AuthProvider.of(context)?.authService.getUser();
                   print(userJson);
                   Map<String, dynamic> user = jsonDecode(userJson);
                   print(user);
@@ -57,7 +57,7 @@ class MainScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () async {
-                  await AuthProvider.of(context).authService.logout();
+                  await AuthProvider.of(context)?.authService.logout();
                   Navigator.of(context).pushReplacementNamed('/login');
                 },
                 child: const Text('Logout', style: TextStyle(fontSize: 20)),
@@ -66,7 +66,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var isAuthenticated = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .isAuthenticated();
                   // Fluttertoast.showToast(
                   //     msg: "isAuthenticated: ${isAuthenticated.toString()}");
@@ -94,7 +94,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var accessToken = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .getAccessToken();
                   Alert(
                     context: context,
@@ -120,7 +120,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var idToken =
-                      await AuthProvider.of(context).authService.getIdToken();
+                      await AuthProvider.of(context)?.authService.getIdToken();
                   Alert(
                     context: context,
                     //type: AlertType.info,
@@ -144,7 +144,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .revokeAccessToken();
                   Alert(
                     context: context,
@@ -162,7 +162,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .revokeIdToken();
                   Fluttertoast.showToast(msg: "result: $result");
                   Navigator.of(context).pushReplacementNamed('/splash');
@@ -174,7 +174,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .revokeRefreshToken();
                   Fluttertoast.showToast(msg: "result: $result");
                   Navigator.of(context).pushReplacementNamed('/splash');
@@ -186,7 +186,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result =
-                      await AuthProvider.of(context).authService.clearTokens();
+                      await AuthProvider.of(context)?.authService.clearTokens();
                   Fluttertoast.showToast(msg: "result: $result");
                   Navigator.of(context).pushReplacementNamed('/splash');
                 },
@@ -197,7 +197,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .introspectAccessToken();
                   Fluttertoast.showToast(msg: "introspectAccessToken: $result");
                 },
@@ -208,7 +208,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .introspectIdToken();
                   Fluttertoast.showToast(msg: "introspectIdToken: $result");
                 },
@@ -219,7 +219,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .introspectRefreshToken();
                   Fluttertoast.showToast(
                       msg: "introspectRefreshToken: $result");
@@ -231,7 +231,7 @@ class MainScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   var result = await AuthProvider.of(context)
-                      .authService
+                      ?.authService
                       .refreshTokens();
                   Fluttertoast.showToast(msg: "refreshTokens: $result");
                 },
