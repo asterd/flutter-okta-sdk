@@ -4,10 +4,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_okta_sdk'
-  s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
+  s.version          = '0.0.4'
+  s.summary          = 'This Flutter Okta Auth SDK library helps you to add authentication in your Flutter apps. It is a wrapper around Okta Android and Okta iOS.'
   s.description      = <<-DESC
-A new flutter plugin project.
+      A new flutter plugin project.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }

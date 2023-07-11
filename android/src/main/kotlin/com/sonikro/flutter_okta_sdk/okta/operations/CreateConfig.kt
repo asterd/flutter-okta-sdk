@@ -11,7 +11,6 @@ import com.sonikro.flutter_okta_sdk.okta.entities.OktaClient
 import com.sonikro.flutter_okta_sdk.okta.entities.OktaRequestParameters
 import com.sonikro.flutter_okta_sdk.okta.entities.PendingOperation
 
-
 fun createConfig(arguments: Map<String, Any>, context: Context) {
     try {
         val params = processOktaRequestArguments(arguments)
@@ -74,8 +73,7 @@ private fun processOktaRequestArguments(arguments: Map<String, Any>): OktaReques
         discoveryUri = (arguments["discoveryUrl"] as String?)!!,
         endSessionRedirectUri = (arguments["endSessionRedirectUri"] as String?)!!,
         redirectUri = (arguments["redirectUrl"] as String?)!!,
-        requireHardwareBackedKeyStore = (arguments["requireHardwareBackedKeyStore"] as Boolean?)
-                ?: false,
+        requireHardwareBackedKeyStore = (arguments["requireHardwareBackedKeyStore"] as Boolean?) ?: false,
         scopes = arguments["scopes"] as ArrayList<String>,
         userAgentTemplate = (arguments["userAgentTemplate"] as String?) ?: "",
         tokenUrl = (arguments["tokenUrl"] as String?) ?: "",

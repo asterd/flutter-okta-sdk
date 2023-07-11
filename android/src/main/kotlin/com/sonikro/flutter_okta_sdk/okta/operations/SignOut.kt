@@ -15,15 +15,15 @@ fun signOut(activity: Activity) {
     // revoke tokens
     val token: Tokens = OktaClient.getWebClient().sessionClient.tokens
     OktaClient.getWebClient().sessionClient.revokeToken(token.refreshToken,
-            object : RequestCallback<Boolean, AuthorizationException?> {
-                override fun onSuccess(result: Boolean) {
-                    //handle result
-                }
+        object : RequestCallback<Boolean, AuthorizationException?> {
+            override fun onSuccess(result: Boolean) {
+                //handle result
+            }
 
-                override fun onError(error: String, exception: AuthorizationException?) {
-                    //handle request error
-                }
-            })
+            override fun onError(error: String, exception: AuthorizationException?) {
+                //handle request error
+            }
+        })
 
     // clear session
     OktaClient.getWebClient().sessionClient?.clear()
