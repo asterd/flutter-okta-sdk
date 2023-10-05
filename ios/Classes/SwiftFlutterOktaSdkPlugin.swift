@@ -78,6 +78,10 @@ public class SwiftFlutterOktaSdkPlugin: NSObject, FlutterPlugin {
         });
         break;
 
+       case "platformVersion":
+         result("iOS " + UIDevice.current.systemVersion)
+        break;
+
       case "signOut":
         signOut(callback: { error in
           if(error != nil) {
@@ -114,6 +118,12 @@ public class SwiftFlutterOktaSdkPlugin: NSObject, FlutterPlugin {
 
       case "getIdToken":
         getIdToken(callback: { token in
+          result(token);
+        })
+        break;
+
+      case "getRefreshToken":
+        getRefreshToken(callback: { token in
           result(token);
         })
         break;
@@ -303,6 +313,13 @@ public class SwiftFlutterOktaSdkPlugin: NSObject, FlutterPlugin {
     else { callback?(nil) }
   }
 
+  func getRefreshToken(callback: ((String?) -> (Void))? ) {
+    if let refreshToken = stateManager?.refreshToken {
+      callback?(refreshToken)
+    }
+    else { callback?(nil) }
+  }
+
   func revokeAccessToken(callback: ((Bool) ->(Void))?) {
     if let accessToken = stateManager?.accessToken {
       return _revokeToken(token: accessToken, callback: callback);
@@ -395,3 +412,4 @@ public class SwiftFlutterOktaSdkPlugin: NSObject, FlutterPlugin {
     }
   }
 }
+

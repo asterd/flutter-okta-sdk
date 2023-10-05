@@ -55,9 +55,11 @@ class HttpClientImpl internal constructor(private val userAgentTemplate: String)
         val requestProperties = params.requestProperties()
         val userAgent = userAgent
         requestProperties!![ConnectionParameters.USER_AGENT] = userAgent
-        for (property in requestProperties.keys) {
-            conn.setRequestProperty(property, requestProperties[property])
-        }
+        //if (requestProperties != null) {
+            for (property in requestProperties.keys) {
+                conn.setRequestProperty(property, requestProperties[property])
+            }
+        //}
         val requestMethod = params.requestMethod()
         val postParameters = params.postParameters()
         conn.requestMethod = requestMethod.name

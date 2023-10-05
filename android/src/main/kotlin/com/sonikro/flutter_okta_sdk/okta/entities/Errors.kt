@@ -9,6 +9,7 @@ enum class Errors(val errorCode: String, val errorMessage: String) {
     OKTA_OIDC_ERROR("-600", "Okta Oidc error"),
     ERROR_TOKEN_TYPE("-700", "Token type not found"),
     NO_ACCESS_TOKEN("-900", "No access token found"),
+    NO_REFRESH_TOKEN("-901", "No refresh token found"),
     SIGN_IN_FAILED("-1000", "Sign in was not authorized"),
     GENERIC_ERROR("-1100", "Generic Error"),
     METHOD_NOT_IMPLEMENTED("-1200", "This method is not implemented"),

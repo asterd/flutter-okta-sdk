@@ -7,6 +7,11 @@ class OktaSDK {
 
   bool isInitialized = false;
 
+  static Future<String> get platformVersion async {
+    final String version = await _channel.invokeMethod('getPlatformVersion');
+    return version;
+  }
+
   Future<void> createConfig(BaseRequest request) async {
     this.isInitialized = false;
     await _channel.invokeMethod(
@@ -55,6 +60,13 @@ class OktaSDK {
       throw Exception("Cannot get id token before initializing Okta SDK");
     }
     return await _channel.invokeMethod('getIdToken');
+  }
+
+  Future<String?> getRefreshToken() async {
+    if (this.isInitialized == false) {
+      throw Exception("Cannot get refresh token before initializing Okta SDK");
+    }
+    return await _channel.invokeMethod('getRefreshToken');
   }
 
   Future<bool> revokeAccessToken() async {
