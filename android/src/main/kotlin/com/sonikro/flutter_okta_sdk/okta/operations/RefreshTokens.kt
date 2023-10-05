@@ -11,7 +11,6 @@ import com.sonikro.flutter_okta_sdk.okta.entities.PendingOperation
 
 //import jdk.nashorn.internal.runtime.regexp.joni.constants.Arguments
 
-
 fun refreshTokens() {
     OktaClient.getWebClient().sessionClient.refreshToken(object : RequestCallback<Tokens, AuthorizationException> {
         override fun onSuccess(result: Tokens) {
